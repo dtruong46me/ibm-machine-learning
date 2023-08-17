@@ -14,10 +14,10 @@
 ### Fit Parameters vs Hyper Paramenter
 **Machine Learning Framework** (applies to Supervised Learning Models)
 
-![](img/1.png)
+**$y_p = f(\Omega, x)$**
 
 Our framework estimates a relationship between the features and target
-- Here, Omega (the **Fit Paramenters**) involve aspects of the model we estimate (fit) using the data.
+- Here, $\Omega$ (the **Fit Paramenters**) involve aspects of the model we estimate (fit) using the data.
 - To implement our approach, we make decisions regarding how to produce these estimates.
 - These decisions lead to the **hyperparameters**, that are an important part of the ML workflow (though not explicit components of the model).
 
@@ -40,20 +40,20 @@ Two main modeling approaches:
 **Interpretation**
 
 - In some cases, the primary objective is to train a model to find insights from the data
-- `y_p = f(omega, x)`, the **interpretation approach** use `omega` to give us insight into a system.
+- $y_p = f(\Omega, x)$, the **interpretation approach** use $\Omega$ to give us insight into a system.
 - Common workflow:
-    - Gather x,y; Train model by finding the `omega` that gives the bes prediction `y_p = f(omega, x)`
-    - Focus on `omega` (rather than `y_p`) to generate insights
+    - Gather x,y; Train model by finding the $\Omega$ that gives the bes prediction $y_p = f(\Omega, x)$
+    - Focus on $\Omega$ (rather than $y_p$) to generate insights
 - Example interpretation exercises:
-    - x = customer demographics, y = sales data; examine `omega` to understand loyalty by segment
-    - x = car safety features, y = traffic accidents; examine `omega` to understand what makes cars safer
-    - x = market budget, y = movie revenue; examine `omega` to understand marketing effectiveness
+    - x = customer demographics, y = sales data; examine $\Omega$ to understand loyalty by segment
+    - x = car safety features, y = traffic accidents; examine $\Omega$ to understand what makes cars safer
+    - x = market budget, y = movie revenue; examine $\Omega$ to understand marketing effectiveness
 
 **Prediction**
 - In some cases, the primary objective is to make the best prediction
-- In `y = f(omega, x)`, the **prediction approach** compares `y_p` with `y`
+- In $y_p = f(\Omega, x)$, the **prediction approach** compares $y_p$ with $y$
 - The focus is on **performance metrics**, which measure the quality of the model's predictions.
-    - **Performance metrics** usually involve some measure of closeness between `y_p` with `y`
+    - **Performance metrics** usually involve some measure of closeness between $y_p$ with $y$
     - Without focusing on interpretability, we risk having a Black-box model
 - Example of prediction exercises:
     - x = customer purchase history, y = customer churn; focus on predicting customer churn
@@ -63,7 +63,7 @@ Two main modeling approaches:
 ### Example: Regression with Housing Data
 The target is the price of housing, and the features include characteristics about the house and area.
 
-Suppose we fit the model `y = f(omega, x)`, based on data on housing sales in Ames, lowa, and obtain estimates of paramenter `omega`
+Suppose we fit the model $y_p = f(\Omega, x)$, based on data on housing sales in Ames, lowa, and obtain estimates of paramenter $\Omega$
 
 These parameters represent coefficients relating the features x with expected target values.
 
